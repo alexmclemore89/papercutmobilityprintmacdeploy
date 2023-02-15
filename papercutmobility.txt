@@ -1,0 +1,10 @@
+/usr/sbin/softwareupdate --install-rosetta --agree-to-license;
+cd /Users/Shared/;
+curl -O https://"LINK TO PAPERCUT MOBILITY PRINT DMG. THIS MUST BE ACCESSABLE EXTERNALLY OR INTERNALLY. MAKE SURE YOU RENAME THE FILE TO papercut.dmg. REMOVE QUOTES!!";
+mv papercut.dmg "NAME OF PAPERCUT FILE.dmg";
+hdiutil attach /Users/Shared/NAME OF PAPERCUT DMG FILE;
+cd /Volumes/PaperCut\ Mobility\ Print\ Client/;
+installer -pkg PaperCut\ Mobility\ Print\ Client.pkg -target "/";
+cd /;
+hdiutil unmount /Volumes/PaperCut\ Mobility\ Print\ Client/;
+rm /Users/Shared/NAME OF PAPERCUT FILE
